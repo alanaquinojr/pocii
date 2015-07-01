@@ -1,0 +1,52 @@
+<section id="dashboard-view" class="mainbar" data-ng-controller="dashboard as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="widget wviolet">
+                      <div data-cc-widget-header title="Sign in para acessar sistema"
+                             allow-collapse="true"></div>
+                      <div class="widget-content text-left text-info">
+                    <form class="form-inline" role="form">
+                        <div class="form-group form-group-sm">
+                            <div class="input-group">
+                                <label class="sr-only" for="exampleInputEmail2">Username</label>
+                                <input type="text" class="form-control input-sm" id="exampleInputEmail2" placeholder="Enter username" ng-model="vm.credentials.username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                            <input type="password" class="form-control input-sm" id="exampleInputPassword2" placeholder="Password" ng-model="vm.credentials.password">
+                        </div>
+                        <button  class="btn btn-default" ng-click='vm.signin()'>Sign in</button>
+                    </form>
+                          Apliacaçao demo usando AngularJS com Node Js, Neo4J e Express. Use 'guest'/'guestpassword' para acessar o sistema.
+                      </div>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="widget wblue">
+                        <div data-cc-widget-header title="Adicione ou remova pontos de conexão"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-left text-info">
+                            Adicione ou remova pontos de ligação (blocos, pares, dispositivos, etc..). Quando um novo elemento for adicionado ele será automaticamente adicionado ao menu.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="widget wgreen">
+                        <div data-cc-widget-header title="Crie circuitos"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-left text-info">
+                            Depois de criar os pontos de conexão, informe o circuito que os interliga. Escolha dois pontos e crie a ligaçao.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

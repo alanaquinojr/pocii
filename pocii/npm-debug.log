@@ -1,0 +1,565 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 warn package.json ANNEStack@0.0.2 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/alan/Documentos/POC-II/ANNE-stack-master',
+6 verbose install   [ 'express',
+6 verbose install     'neo4j-js',
+6 verbose install     'async',
+6 verbose install     'connect-flash',
+6 verbose install     'passport',
+6 verbose install     'passport-local',
+6 verbose install     'passport-twitter',
+6 verbose install     'express-jwt',
+6 verbose install     'jsonwebtoken',
+6 verbose install     'selenium-webdriver' ] ]
+7 info preinstall ANNEStack@0.0.2
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'neo4j-js@0.0.7', null ]
+10 verbose cache add name=undefined spec="neo4j-js@0.0.7" args=["neo4j-js@0.0.7",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'neo4j-js@0.0.7',
+11 verbose parsed url   path: 'neo4j-js@0.0.7',
+11 verbose parsed url   href: 'neo4j-js@0.0.7' }
+12 verbose cache add [ 'async@~0.2.10', null ]
+13 verbose cache add name=undefined spec="async@~0.2.10" args=["async@~0.2.10",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'async@~0.2.10',
+14 verbose parsed url   path: 'async@~0.2.10',
+14 verbose parsed url   href: 'async@~0.2.10' }
+15 verbose cache add [ 'connect-flash@0.1.1', null ]
+16 verbose cache add name=undefined spec="connect-flash@0.1.1" args=["connect-flash@0.1.1",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'connect-flash@0.1.1',
+17 verbose parsed url   path: 'connect-flash@0.1.1',
+17 verbose parsed url   href: 'connect-flash@0.1.1' }
+18 verbose cache add [ 'passport@0.2.1', null ]
+19 verbose cache add name=undefined spec="passport@0.2.1" args=["passport@0.2.1",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'passport@0.2.1',
+20 verbose parsed url   path: 'passport@0.2.1',
+20 verbose parsed url   href: 'passport@0.2.1' }
+21 verbose cache add [ 'passport-local@1.0.0', null ]
+22 verbose cache add name=undefined spec="passport-local@1.0.0" args=["passport-local@1.0.0",null]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'passport-local@1.0.0',
+23 verbose parsed url   path: 'passport-local@1.0.0',
+23 verbose parsed url   href: 'passport-local@1.0.0' }
+24 verbose cache add [ 'passport-twitter@1.0.2', null ]
+25 verbose cache add name=undefined spec="passport-twitter@1.0.2" args=["passport-twitter@1.0.2",null]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'passport-twitter@1.0.2',
+26 verbose parsed url   path: 'passport-twitter@1.0.2',
+26 verbose parsed url   href: 'passport-twitter@1.0.2' }
+27 verbose cache add name="neo4j-js" spec="0.0.7" args=["neo4j-js","0.0.7"]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: '0.0.7',
+28 verbose parsed url   path: '0.0.7',
+28 verbose parsed url   href: '0.0.7' }
+29 verbose addNamed [ 'neo4j-js', '0.0.7' ]
+30 verbose addNamed [ '0.0.7', '0.0.7' ]
+31 verbose cache add name="async" spec="~0.2.10" args=["async","~0.2.10"]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: '~0.2.10',
+32 verbose parsed url   path: '~0.2.10',
+32 verbose parsed url   href: '~0.2.10' }
+33 verbose addNamed [ 'async', '~0.2.10' ]
+34 verbose addNamed [ null, '>=0.2.10-0 <0.3.0-0' ]
+35 verbose cache add name="connect-flash" spec="0.1.1" args=["connect-flash","0.1.1"]
+36 verbose parsed url { protocol: null,
+36 verbose parsed url   slashes: null,
+36 verbose parsed url   auth: null,
+36 verbose parsed url   host: null,
+36 verbose parsed url   port: null,
+36 verbose parsed url   hostname: null,
+36 verbose parsed url   hash: null,
+36 verbose parsed url   search: null,
+36 verbose parsed url   query: null,
+36 verbose parsed url   pathname: '0.1.1',
+36 verbose parsed url   path: '0.1.1',
+36 verbose parsed url   href: '0.1.1' }
+37 verbose addNamed [ 'connect-flash', '0.1.1' ]
+38 verbose addNamed [ '0.1.1', '0.1.1' ]
+39 verbose cache add name="passport" spec="0.2.1" args=["passport","0.2.1"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: '0.2.1',
+40 verbose parsed url   path: '0.2.1',
+40 verbose parsed url   href: '0.2.1' }
+41 verbose addNamed [ 'passport', '0.2.1' ]
+42 verbose addNamed [ '0.2.1', '0.2.1' ]
+43 verbose cache add name="passport-local" spec="1.0.0" args=["passport-local","1.0.0"]
+44 verbose parsed url { protocol: null,
+44 verbose parsed url   slashes: null,
+44 verbose parsed url   auth: null,
+44 verbose parsed url   host: null,
+44 verbose parsed url   port: null,
+44 verbose parsed url   hostname: null,
+44 verbose parsed url   hash: null,
+44 verbose parsed url   search: null,
+44 verbose parsed url   query: null,
+44 verbose parsed url   pathname: '1.0.0',
+44 verbose parsed url   path: '1.0.0',
+44 verbose parsed url   href: '1.0.0' }
+45 verbose addNamed [ 'passport-local', '1.0.0' ]
+46 verbose addNamed [ '1.0.0', '1.0.0' ]
+47 verbose cache add [ 'express-jwt@0.5.1', null ]
+48 verbose cache add name=undefined spec="express-jwt@0.5.1" args=["express-jwt@0.5.1",null]
+49 verbose parsed url { protocol: null,
+49 verbose parsed url   slashes: null,
+49 verbose parsed url   auth: null,
+49 verbose parsed url   host: null,
+49 verbose parsed url   port: null,
+49 verbose parsed url   hostname: null,
+49 verbose parsed url   hash: null,
+49 verbose parsed url   search: null,
+49 verbose parsed url   query: null,
+49 verbose parsed url   pathname: 'express-jwt@0.5.1',
+49 verbose parsed url   path: 'express-jwt@0.5.1',
+49 verbose parsed url   href: 'express-jwt@0.5.1' }
+50 verbose cache add [ 'jsonwebtoken@1.2.0', null ]
+51 verbose cache add name=undefined spec="jsonwebtoken@1.2.0" args=["jsonwebtoken@1.2.0",null]
+52 verbose parsed url { protocol: null,
+52 verbose parsed url   slashes: null,
+52 verbose parsed url   auth: null,
+52 verbose parsed url   host: null,
+52 verbose parsed url   port: null,
+52 verbose parsed url   hostname: null,
+52 verbose parsed url   hash: null,
+52 verbose parsed url   search: null,
+52 verbose parsed url   query: null,
+52 verbose parsed url   pathname: 'jsonwebtoken@1.2.0',
+52 verbose parsed url   path: 'jsonwebtoken@1.2.0',
+52 verbose parsed url   href: 'jsonwebtoken@1.2.0' }
+53 verbose cache add [ 'selenium-webdriver@~2.40.0', null ]
+54 verbose cache add name=undefined spec="selenium-webdriver@~2.40.0" args=["selenium-webdriver@~2.40.0",null]
+55 verbose parsed url { protocol: null,
+55 verbose parsed url   slashes: null,
+55 verbose parsed url   auth: null,
+55 verbose parsed url   host: null,
+55 verbose parsed url   port: null,
+55 verbose parsed url   hostname: null,
+55 verbose parsed url   hash: null,
+55 verbose parsed url   search: null,
+55 verbose parsed url   query: null,
+55 verbose parsed url   pathname: 'selenium-webdriver@~2.40.0',
+55 verbose parsed url   path: 'selenium-webdriver@~2.40.0',
+55 verbose parsed url   href: 'selenium-webdriver@~2.40.0' }
+56 verbose cache add [ 'express@3.4.4', null ]
+57 verbose cache add name=undefined spec="express@3.4.4" args=["express@3.4.4",null]
+58 verbose parsed url { protocol: null,
+58 verbose parsed url   slashes: null,
+58 verbose parsed url   auth: null,
+58 verbose parsed url   host: null,
+58 verbose parsed url   port: null,
+58 verbose parsed url   hostname: null,
+58 verbose parsed url   hash: null,
+58 verbose parsed url   search: null,
+58 verbose parsed url   query: null,
+58 verbose parsed url   pathname: 'express@3.4.4',
+58 verbose parsed url   path: 'express@3.4.4',
+58 verbose parsed url   href: 'express@3.4.4' }
+59 verbose cache add name="passport-twitter" spec="1.0.2" args=["passport-twitter","1.0.2"]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: '1.0.2',
+60 verbose parsed url   path: '1.0.2',
+60 verbose parsed url   href: '1.0.2' }
+61 verbose addNamed [ 'passport-twitter', '1.0.2' ]
+62 verbose addNamed [ '1.0.2', '1.0.2' ]
+63 silly lockFile 04bf7b1c-neo4j-js-0-0-7 neo4j-js@0.0.7
+64 verbose lock neo4j-js@0.0.7 /home/alan/.npm/04bf7b1c-neo4j-js-0-0-7.lock
+65 silly lockFile 9b5112ad-async-0-2-10 async@~0.2.10
+66 verbose lock async@~0.2.10 /home/alan/.npm/9b5112ad-async-0-2-10.lock
+67 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+68 verbose lock connect-flash@0.1.1 /home/alan/.npm/0cdf4f98-connect-flash-0-1-1.lock
+69 silly lockFile b563cf22-passport-0-2-1 passport@0.2.1
+70 verbose lock passport@0.2.1 /home/alan/.npm/b563cf22-passport-0-2-1.lock
+71 silly lockFile 8defd22e-passport-local-1-0-0 passport-local@1.0.0
+72 verbose lock passport-local@1.0.0 /home/alan/.npm/8defd22e-passport-local-1-0-0.lock
+73 silly lockFile 50fcdf9c-passport-twitter-1-0-2 passport-twitter@1.0.2
+74 verbose lock passport-twitter@1.0.2 /home/alan/.npm/50fcdf9c-passport-twitter-1-0-2.lock
+75 verbose cache add name="express-jwt" spec="0.5.1" args=["express-jwt","0.5.1"]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '0.5.1',
+76 verbose parsed url   path: '0.5.1',
+76 verbose parsed url   href: '0.5.1' }
+77 verbose addNamed [ 'express-jwt', '0.5.1' ]
+78 verbose addNamed [ '0.5.1', '0.5.1' ]
+79 silly lockFile 9823fa84-express-jwt-0-5-1 express-jwt@0.5.1
+80 verbose lock express-jwt@0.5.1 /home/alan/.npm/9823fa84-express-jwt-0-5-1.lock
+81 verbose cache add name="jsonwebtoken" spec="1.2.0" args=["jsonwebtoken","1.2.0"]
+82 verbose parsed url { protocol: null,
+82 verbose parsed url   slashes: null,
+82 verbose parsed url   auth: null,
+82 verbose parsed url   host: null,
+82 verbose parsed url   port: null,
+82 verbose parsed url   hostname: null,
+82 verbose parsed url   hash: null,
+82 verbose parsed url   search: null,
+82 verbose parsed url   query: null,
+82 verbose parsed url   pathname: '1.2.0',
+82 verbose parsed url   path: '1.2.0',
+82 verbose parsed url   href: '1.2.0' }
+83 verbose addNamed [ 'jsonwebtoken', '1.2.0' ]
+84 verbose addNamed [ '1.2.0', '1.2.0' ]
+85 silly lockFile 3f26564d-jsonwebtoken-1-2-0 jsonwebtoken@1.2.0
+86 verbose lock jsonwebtoken@1.2.0 /home/alan/.npm/3f26564d-jsonwebtoken-1-2-0.lock
+87 verbose cache add name="selenium-webdriver" spec="~2.40.0" args=["selenium-webdriver","~2.40.0"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '~2.40.0',
+88 verbose parsed url   path: '~2.40.0',
+88 verbose parsed url   href: '~2.40.0' }
+89 verbose addNamed [ 'selenium-webdriver', '~2.40.0' ]
+90 verbose addNamed [ null, '>=2.40.0-0 <2.41.0-0' ]
+91 silly lockFile 0c410573-selenium-webdriver-2-40-0 selenium-webdriver@~2.40.0
+92 verbose lock selenium-webdriver@~2.40.0 /home/alan/.npm/0c410573-selenium-webdriver-2-40-0.lock
+93 verbose cache add name="express" spec="3.4.4" args=["express","3.4.4"]
+94 verbose parsed url { protocol: null,
+94 verbose parsed url   slashes: null,
+94 verbose parsed url   auth: null,
+94 verbose parsed url   host: null,
+94 verbose parsed url   port: null,
+94 verbose parsed url   hostname: null,
+94 verbose parsed url   hash: null,
+94 verbose parsed url   search: null,
+94 verbose parsed url   query: null,
+94 verbose parsed url   pathname: '3.4.4',
+94 verbose parsed url   path: '3.4.4',
+94 verbose parsed url   href: '3.4.4' }
+95 verbose addNamed [ 'express', '3.4.4' ]
+96 verbose addNamed [ '3.4.4', '3.4.4' ]
+97 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+98 verbose lock express@3.4.4 /home/alan/.npm/edcc27a2-express-3-4-4.lock
+99 silly addNameRange { name: 'async', range: '>=0.2.10-0 <0.3.0-0', hasData: false }
+100 silly addNameRange { name: 'selenium-webdriver',
+100 silly addNameRange   range: '>=2.40.0-0 <2.41.0-0',
+100 silly addNameRange   hasData: false }
+101 verbose request where is /neo4j-js
+102 verbose request registry https://registry.npmjs.org/
+103 verbose request id 97331d0ede62a9fe
+104 verbose url raw /neo4j-js
+105 verbose url resolving [ 'https://registry.npmjs.org/', './neo4j-js' ]
+106 verbose url resolved https://registry.npmjs.org/neo4j-js
+107 verbose request where is https://registry.npmjs.org/neo4j-js
+108 info trying registry request attempt 1 at 16:13:01
+109 http GET https://registry.npmjs.org/neo4j-js
+110 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+111 verbose request where is /passport-local
+112 verbose request registry https://registry.npmjs.org/
+113 verbose url raw /passport-local
+114 verbose url resolving [ 'https://registry.npmjs.org/', './passport-local' ]
+115 verbose url resolved https://registry.npmjs.org/passport-local
+116 verbose request where is https://registry.npmjs.org/passport-local
+117 info trying registry request attempt 1 at 16:13:01
+118 http GET https://registry.npmjs.org/passport-local
+119 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+120 verbose request where is /passport-twitter
+121 verbose request registry https://registry.npmjs.org/
+122 verbose url raw /passport-twitter
+123 verbose url resolving [ 'https://registry.npmjs.org/', './passport-twitter' ]
+124 verbose url resolved https://registry.npmjs.org/passport-twitter
+125 verbose request where is https://registry.npmjs.org/passport-twitter
+126 info trying registry request attempt 1 at 16:13:01
+127 http GET https://registry.npmjs.org/passport-twitter
+128 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+129 verbose request where is /express-jwt
+130 verbose request registry https://registry.npmjs.org/
+131 verbose url raw /express-jwt
+132 verbose url resolving [ 'https://registry.npmjs.org/', './express-jwt' ]
+133 verbose url resolved https://registry.npmjs.org/express-jwt
+134 verbose request where is https://registry.npmjs.org/express-jwt
+135 info trying registry request attempt 1 at 16:13:01
+136 http GET https://registry.npmjs.org/express-jwt
+137 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+138 verbose request where is /connect-flash
+139 verbose request registry https://registry.npmjs.org/
+140 verbose url raw /connect-flash
+141 verbose url resolving [ 'https://registry.npmjs.org/', './connect-flash' ]
+142 verbose url resolved https://registry.npmjs.org/connect-flash
+143 verbose request where is https://registry.npmjs.org/connect-flash
+144 info trying registry request attempt 1 at 16:13:01
+145 http GET https://registry.npmjs.org/connect-flash
+146 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+147 verbose request where is /jsonwebtoken
+148 verbose request registry https://registry.npmjs.org/
+149 verbose url raw /jsonwebtoken
+150 verbose url resolving [ 'https://registry.npmjs.org/', './jsonwebtoken' ]
+151 verbose url resolved https://registry.npmjs.org/jsonwebtoken
+152 verbose request where is https://registry.npmjs.org/jsonwebtoken
+153 info trying registry request attempt 1 at 16:13:01
+154 http GET https://registry.npmjs.org/jsonwebtoken
+155 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+156 verbose request where is /passport
+157 verbose request registry https://registry.npmjs.org/
+158 verbose url raw /passport
+159 verbose url resolving [ 'https://registry.npmjs.org/', './passport' ]
+160 verbose url resolved https://registry.npmjs.org/passport
+161 verbose request where is https://registry.npmjs.org/passport
+162 info trying registry request attempt 1 at 16:13:01
+163 http GET https://registry.npmjs.org/passport
+164 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+165 verbose request where is /selenium-webdriver
+166 verbose request registry https://registry.npmjs.org/
+167 verbose url raw /selenium-webdriver
+168 verbose url resolving [ 'https://registry.npmjs.org/', './selenium-webdriver' ]
+169 verbose url resolved https://registry.npmjs.org/selenium-webdriver
+170 verbose request where is https://registry.npmjs.org/selenium-webdriver
+171 info trying registry request attempt 1 at 16:13:01
+172 http GET https://registry.npmjs.org/selenium-webdriver
+173 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+174 verbose request where is /express
+175 verbose request registry https://registry.npmjs.org/
+176 verbose url raw /express
+177 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+178 verbose url resolved https://registry.npmjs.org/express
+179 verbose request where is https://registry.npmjs.org/express
+180 info trying registry request attempt 1 at 16:13:01
+181 http GET https://registry.npmjs.org/express
+182 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+183 verbose request where is /async
+184 verbose request registry https://registry.npmjs.org/
+185 verbose url raw /async
+186 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+187 verbose url resolved https://registry.npmjs.org/async
+188 verbose request where is https://registry.npmjs.org/async
+189 info trying registry request attempt 1 at 16:13:01
+190 verbose etag "7I8NRMN7LLXBX5242QNINEG21"
+191 http GET https://registry.npmjs.org/async
+192 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+193 info trying registry request attempt 2 at 16:13:11
+194 http GET https://registry.npmjs.org/neo4j-js
+195 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+196 info trying registry request attempt 2 at 16:13:11
+197 http GET https://registry.npmjs.org/passport-local
+198 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+199 info trying registry request attempt 2 at 16:13:11
+200 http GET https://registry.npmjs.org/passport-twitter
+201 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+202 info trying registry request attempt 2 at 16:13:11
+203 http GET https://registry.npmjs.org/express-jwt
+204 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+205 info trying registry request attempt 2 at 16:13:11
+206 http GET https://registry.npmjs.org/connect-flash
+207 info trying registry request attempt 2 at 16:13:11
+208 http GET https://registry.npmjs.org/jsonwebtoken
+209 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+210 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+211 info trying registry request attempt 2 at 16:13:11
+212 http GET https://registry.npmjs.org/passport
+213 info trying registry request attempt 2 at 16:13:11
+214 http GET https://registry.npmjs.org/selenium-webdriver
+215 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+216 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+217 info trying registry request attempt 2 at 16:13:11
+218 http GET https://registry.npmjs.org/express
+219 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+220 info trying registry request attempt 2 at 16:13:11
+221 verbose etag "7I8NRMN7LLXBX5242QNINEG21"
+222 http GET https://registry.npmjs.org/async
+223 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ENETUNREACH
+224 info trying registry request attempt 3 at 16:14:11
+225 http GET https://registry.npmjs.org/neo4j-js
+226 info trying registry request attempt 3 at 16:14:11
+227 http GET https://registry.npmjs.org/passport-local
+228 info trying registry request attempt 3 at 16:14:11
+229 http GET https://registry.npmjs.org/passport-twitter
+230 info trying registry request attempt 3 at 16:14:11
+231 http GET https://registry.npmjs.org/express-jwt
+232 info trying registry request attempt 3 at 16:14:11
+233 http GET https://registry.npmjs.org/connect-flash
+234 info trying registry request attempt 3 at 16:14:11
+235 http GET https://registry.npmjs.org/jsonwebtoken
+236 info trying registry request attempt 3 at 16:14:11
+237 http GET https://registry.npmjs.org/passport
+238 info trying registry request attempt 3 at 16:14:11
+239 http GET https://registry.npmjs.org/selenium-webdriver
+240 info trying registry request attempt 3 at 16:14:11
+241 http GET https://registry.npmjs.org/express
+242 info trying registry request attempt 3 at 16:14:11
+243 verbose etag "7I8NRMN7LLXBX5242QNINEG21"
+244 http GET https://registry.npmjs.org/async
+245 silly lockFile 04bf7b1c-neo4j-js-0-0-7 neo4j-js@0.0.7
+246 silly lockFile 04bf7b1c-neo4j-js-0-0-7 neo4j-js@0.0.7
+247 silly lockFile 8defd22e-passport-local-1-0-0 passport-local@1.0.0
+248 silly lockFile 8defd22e-passport-local-1-0-0 passport-local@1.0.0
+249 silly lockFile 50fcdf9c-passport-twitter-1-0-2 passport-twitter@1.0.2
+250 silly lockFile 50fcdf9c-passport-twitter-1-0-2 passport-twitter@1.0.2
+251 silly lockFile 9823fa84-express-jwt-0-5-1 express-jwt@0.5.1
+252 silly lockFile 9823fa84-express-jwt-0-5-1 express-jwt@0.5.1
+253 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+254 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+255 silly lockFile 3f26564d-jsonwebtoken-1-2-0 jsonwebtoken@1.2.0
+256 silly lockFile 3f26564d-jsonwebtoken-1-2-0 jsonwebtoken@1.2.0
+257 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+258 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+259 silly lockFile 0c410573-selenium-webdriver-2-40-0 selenium-webdriver@~2.40.0
+260 silly lockFile 0c410573-selenium-webdriver-2-40-0 selenium-webdriver@~2.40.0
+261 silly lockFile b563cf22-passport-0-2-1 passport@0.2.1
+262 silly lockFile b563cf22-passport-0-2-1 passport@0.2.1
+263 silly registry.get cb [ 304, undefined ]
+264 verbose etag https://registry.npmjs.org/async from cache
+265 silly addNameRange number 2 { name: 'async', range: '>=0.2.10-0 <0.3.0-0', hasData: true }
+266 silly addNameRange versions [ 'async',
+266 silly addNameRange   [ '0.1.0',
+266 silly addNameRange     '0.1.1',
+266 silly addNameRange     '0.1.2',
+266 silly addNameRange     '0.1.3',
+266 silly addNameRange     '0.1.4',
+266 silly addNameRange     '0.1.5',
+266 silly addNameRange     '0.1.6',
+266 silly addNameRange     '0.1.7',
+266 silly addNameRange     '0.1.8',
+266 silly addNameRange     '0.1.9',
+266 silly addNameRange     '0.1.10',
+266 silly addNameRange     '0.1.11',
+266 silly addNameRange     '0.1.12',
+266 silly addNameRange     '0.1.13',
+266 silly addNameRange     '0.1.14',
+266 silly addNameRange     '0.1.15',
+266 silly addNameRange     '0.1.16',
+266 silly addNameRange     '0.1.17',
+266 silly addNameRange     '0.1.18',
+266 silly addNameRange     '0.1.19',
+266 silly addNameRange     '0.1.20',
+266 silly addNameRange     '0.1.21',
+266 silly addNameRange     '0.1.22',
+266 silly addNameRange     '0.2.0',
+266 silly addNameRange     '0.2.1',
+266 silly addNameRange     '0.2.2',
+266 silly addNameRange     '0.2.3',
+266 silly addNameRange     '0.2.4',
+266 silly addNameRange     '0.2.5',
+266 silly addNameRange     '0.2.6',
+266 silly addNameRange     '0.2.7',
+266 silly addNameRange     '0.2.8',
+266 silly addNameRange     '0.2.9',
+266 silly addNameRange     '0.2.10',
+266 silly addNameRange     '0.3.0',
+266 silly addNameRange     '0.4.0',
+266 silly addNameRange     '0.4.1',
+266 silly addNameRange     '0.5.0',
+266 silly addNameRange     '0.6.0',
+266 silly addNameRange     '0.6.1',
+266 silly addNameRange     '0.6.2',
+266 silly addNameRange     '0.7.0',
+266 silly addNameRange     '0.8.0',
+266 silly addNameRange     '0.9.0' ] ]
+267 verbose addNamed [ 'async', '0.2.10' ]
+268 verbose addNamed [ '0.2.10', '0.2.10' ]
+269 silly lockFile 098b530d-async-0-2-10 async@0.2.10
+270 verbose lock async@0.2.10 /home/alan/.npm/098b530d-async-0-2-10.lock
+271 silly lockFile 098b530d-async-0-2-10 async@0.2.10
+272 silly lockFile 098b530d-async-0-2-10 async@0.2.10
+273 silly lockFile 9b5112ad-async-0-2-10 async@~0.2.10
+274 silly lockFile 9b5112ad-async-0-2-10 async@~0.2.10
+275 error network tunneling socket could not be established, cause=connect ETIMEDOUT
+275 error network This is most likely not a problem with npm itself
+275 error network and is related to network connectivity.
+275 error network In most cases you are behind a proxy or have bad network settings.
+275 error network
+275 error network If you are behind a proxy, please make sure that the
+275 error network 'proxy' config is set properly.  See: 'npm help config'
+276 error System Linux 3.16.0-28-generic
+277 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+278 error cwd /home/alan/Documentos/POC-II/ANNE-stack-master
+279 error node -v v0.10.35
+280 error npm -v 1.4.28
+281 error code ECONNRESET
+282 verbose exit [ 1, true ]
