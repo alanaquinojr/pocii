@@ -10,15 +10,15 @@
         var log = getLogFn(controllerId);
 
         var vm = this;
-        vm.title = 'Ad-hoc Queries';
+        vm.title = 'Consultas Diretas';
         vm.nodes = [];
         vm.sampleQueries = [
-            {name: 'Show all drugs',
+            {name: 'Retorne todos os Nós',
             query: ['Match (n)',
                    'Return n'
                    ].join('\n')
             },
-            {name: 'Show all relationships',
+            {name: 'Retorne Todas as ligações',
             query: ['Match n-[r]->m',
                    'Return n,r,m'
                    ].join('\n')},

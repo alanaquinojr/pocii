@@ -1,44 +1,63 @@
-﻿<section class="mainbar" data-ng-controller="create as vm">
+<section class="mainbar" data-ng-controller="create as vm">
     <section class="matter">
         <div class="container">
             <div class="row">
                 <div class="widget wblue">
-                    <div data-cc-widget-header title="Manage Drugs"
+                    <div data-cc-widget-header title="Adicione ou Remova pontos de Conexão"
                          allow-collapse="true"></div>
                     <div class="widget-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>Add a Drug</h4>
+                                <h4>Adicione pontos de conexão</h4>
                                  <form class="form-horizontal" role="form">
+                                     
                                      <div class="form-group">
-                                         <label  class="control-label">Name:</label>
-                                         <input type="text" class="form-control" placeholder="Enter Drug Name"   data-ng-model="vm.newDrugName">
-                                     </div>
+                                         <label  class="control-label">Tipo:</label>
+                                         <select ng-model="vm.relation" class="form-control" ng-options="type for type in vm.nodeTypes" data ng-model = "vm.relation"></select>
+                                     </div>                                     
+                                     
                                      <div class="form-group">
-                                          <label  class="control-label">Description:</label>
-                                         <textarea class="form-control" rows="3" placeholder="Drug Description" ng-model="vm.newDrugDescription"></textarea>
-                                         
+                                         <label  class="control-label">Identificação:</label>
+                                         <input type="text" class="form-control" placeholder="Identificação"   data-ng-model="vm.newDrugName">
+
                                      </div>
+
+                                     <div class="form-group">
+                                         <label  class="control-label">Descrição:</label>
+                                         <textarea class="form-control" rows="1" placeholder="Descriçao do ponto" ng-model="vm.newDrugDescription"></textarea>
+
+                                     </div>
+
+
+                                     <div class="form-group">
+                                         <label  class="control-label">Circuito:</label>
+                                         <textarea class="form-control" rows="1" placeholder="Circuito atendido"   ng-model="vm.ckt"></textarea>
+                                     </div>
+
                                       <div class="form-group">
-                                          <button class="btn btn-info" data-ng-click="vm.addDrug()"><i class="fa fa-pencil-square"></i>Add</button>
+                                          <button class="btn btn-info" data-ng-click="vm.addDrug()"><i class="fa fa-pencil-square"></i>Adicionar</button>
                                       </div>
                                  </form>
                                
                             </div>
 
                             <div class="col-md-6">
-                                <h4>Delete a Drug</h4>
+                                <h4>Remova um ponto de conexão</h4>
                                 <form class="form-horizontal" role="form">
                                      <div class="form-group">
-                                         <label  class="control-label">Drugs:</label>
-                                         <select ng-model="vm.selectedDrugForDelete" class="form-control" ng-options="drug.n.data.name for drug in vm.drugs"></select>
+                                         <label  class="control-label">Ponto de conexão</label>
+                                         <select ng-model="vm.selectedDrugForDelete" class="form-control" ng-options="drug.n.data.type +':'+drug.n.data.name for drug in vm.drugs"></select>
                                      </div>
-                                    
+
                                       <div class="form-group">
-                                          <button class="btn btn-info" data-ng-click="vm.deleteDrug()"><i class="fa fa-pencil-square"></i>Delete</button>
+                                          <button class="btn btn-info" data-ng-click="vm.deleteDrug()"><i class="fa fa-pencil-square"></i>Remover</button>
                                       </div>
                                  </form>
-                               
+
+                                {{vm.selectedDrugForDelete.n.data.description}}
+                                <br>
+                                {{vm.selectedDrugForDelete.n.data.citcuit}}
+
 <!--                               {{vm.drugs}} -- {{vm.selectedDrugForDelete}}-->
                             </div>
                         </div>
@@ -58,51 +77,63 @@
         <div class="container">
             <div class="row">
                 <div class="widget wgreen">
-                    <div data-cc-widget-header title="Manage Relationships"
+                    <div data-cc-widget-header title="Gerencie os circuitos"
                          allow-collapse="true"></div>
                     <div class="widget-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>Add a Relationship</h4>
+                                <h4>Adicione Circuitos</h4>
                                  <form class="form-horizontal" role="form">
                                      <div class="form-group">
-                                         <label  class="control-label">From:</label>
-                                         <select ng-model="vm.relationshipFrom" class="form-control" ng-options="drug.n.data.name for drug in vm.drugs"></select>
+                                         <label  class="control-label">Tipo da Ponta (Bloco, DG, Local, Etc...)</label>
+                                         <select ng-model="vm.relationshipFromType" class="form-control" ng-options="drug.n.data.type for drug in vm.drugs | unique : 'n.data.type' "></select>
+                                     </div>
+                                
+                                     <div class="form-group">
+                                         <label  class="control-label">Ponta A:</label>
+                                         <select ng-model="vm.relationshipFrom" class="form-control" ng-options="drug.n.data.name for drug in vm.drugs | filter:{n.data.type:vm.relationshipFromType.n.data.type}"></select>
                                      </div>
                                     
                                      <div class="form-group">
-                                         <label  class="control-label">Type:</label>
+                                         <label  class="control-label">Tipo de ligaçao :</label>
                                          <select ng-model="vm.relation" class="form-control" ng-options="type for type in vm.relationshipTypes"></select>
                                      </div>
 
+                                     <div class="form-group">
+                                         <label  class="control-label">Tipo da Ponta (Bloco, DG, Local, Etc...)</label>
+                                         <select ng-model="vm.relationshipToType" class="form-control" ng-options="drug.n.data.type for drug in vm.drugs | unique : 'n.data.type' "></select>
+                                     </div>                                     
+                                     
                                       <div class="form-group">
-                                         <label  class="control-label">To:</label>
-                                         <select ng-model="vm.relationshipTo" class="form-control" ng-options="drug.n.data.name for drug in vm.drugs"></select>
+                                         <label  class="control-label">Ponta B:</label>
+                                         <select ng-model="vm.relationshipTo" class="form-control" ng-options="drug.n.data.name for drug in vm.drugs| filter:{n.data.type:vm.relationshipToType.n.data.type}"></select>
+                                          
                                      </div>
                                      <div class="form-group">
-                                          <label  class="control-label">Description:</label>
-                                         <textarea class="form-control" rows="3" placeholder="Relationship Description" ng-model="vm.relationshipDescription"></textarea>
+                                          <label  class="control-label">Descrição:</label>
+                                         <textarea class="form-control" rows="3" placeholder="Descrição do Circuito" ng-model="vm.relationshipDescription"></textarea>
                                          
                                      </div>
                                     
                                       <div class="form-group">
-                                          <button class="btn btn-info" data-ng-click="vm.addRelationship()"><i class="fa fa-pencil-square"></i>Add Relationship</button>
+                                          <button class="btn btn-info" data-ng-click="vm.addRelationship()"><i class="fa fa-pencil-square"></i>Adicionar</button>
                                       </div>
                                  </form>
                                
                             </div>
 
                             <div class="col-md-6">
-                                <h4>Delete a Relationship</h4>
+                                <h4>Remova um circuito</h4>
                                <form class="form-horizontal" role="form">
                                      <div class="form-group">
-                                         <label  class="control-label">Relationship:</label>
-                                         <select ng-model="vm.selectedRelationshipToDelete" class="form-control" ng-options="relation.n.data.name +'-' + relation.r.type + '->' + relation.m.data.name for relation in vm.relationships"></select>
+                                         <label  class="control-label">Circuito:</label>
+                                         <select ng-model="vm.selectedRelationshipToDelete" class="form-control" ng-options="relation.n.data.type +':'+ relation.n.data.name +' -> ' + relation.r.type + ' -> ' + relation.m.data.type + ':' + relation.m.data.name for relation in vm.relationships"></select>
                                      </div>
                                     
                                       <div class="form-group">
-                                          <button class="btn btn-info" data-ng-click="vm.deleteRelationship()"><i class="fa fa-pencil-square"></i>Delete Relationship</button>
+                                          <button class="btn btn-info" data-ng-click="vm.deleteRelationship()"><i class="fa fa-pencil-square"></i>Remover</button>
                                       </div>
+
                                  </form>
                                
                             </div>
@@ -116,4 +147,89 @@
         </div>
 
     </section>
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget worange">
+                    <div data-cc-widget-header title="Edite pontos de Conexão"
+                         allow-collapse="true"></div>
+                    <div class="widget-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Edite pontos de conexão</h4>
+                                <form class="form-horizontal" role="form">
+
+                                    <div class="form-group">
+                                        <label  class="control-label">Ponto de conexão</label>
+                                        <select ng-model="vm.selectedDrug" class="form-control" ng-options="drug.n.data.type +':'+drug.n.data.name for drug in vm.drugs"></select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label  class="control-label">Tipo:</label>
+                                        <input type="text" class="form-control" placeholder="Tipo"   ng-model="vm.selectedDrug.n.data.type">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label  class="control-label">Identificação:</label>
+                                        <input type="text" class="form-control" placeholder="Nome"   data-ng-model="vm.selectedDrug.n.data.name">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label  class="control-label">Descrição:</label>
+                                        <textarea class="form-control" rows="1" placeholder="Descriçao do ponto" ng-model="vm.selectedDrug.n.data.description"></textarea>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label  class="control-label">Circuito:</label>
+                                        <textarea class="form-control" rows="3" placeholder="Circuito atendido"   ng-model="vm.selectedDrug.n.data.citcuit"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn btn-info" data-ng-click="vm.addDrug()"><i class="fa fa-pencil-square"></i>Adicionar</button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <h4>Circuito Selecionado</h4>
+                                <div>
+                                   ID: {{vm.selectedDrug.n.id}}
+                                </div>
+                                <div>
+                                    Nome: {{vm.selectedDrug.n.data.name}}
+                                </div>
+                                <div>
+                                    Descrição: {{vm.selectedDrug.n.data.description}}
+                                </div>
+                                <div>
+                                    Circuito :{{vm.selectedDrug.n.data.citcuit}}
+                                </div>
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <button class="btn btn-info" data-ng-click="vm.updateDrug()"><i class="fa fa-pencil-square"></i>Editar</button>
+                                    </div>
+                                </form>
+
+                                {{vm.selectedDrugForDelete.n.data.description}}
+                                <br>
+                                {{vm.selectedDrugForDelete.n.data.citcuit}}
+
+                                <!--                               {{vm.drugs}} -- {{vm.selectedDrugForDelete}}-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-foot">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </section>
+  s

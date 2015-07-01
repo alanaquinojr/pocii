@@ -14,7 +14,10 @@
         // 3rd Party Modules
         'ui.bootstrap',      // ui-bootstrap (ex: carousel, pagination, dialog)
         'ngDragDrop',
-        'ngGrid'
+        'ngGrid',
+        'ui.utils'
+    
+        
     ]);
     
     // Handle routing errors and success events

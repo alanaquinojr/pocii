@@ -4,7 +4,8 @@
 
 var neo4j = require('neo4j-js');
 var async = require('async');
-var neo4JUrl = 'http://interactions:C0z0OZ70Oh7MriQHeNB5@interactions.sb02.stations.graphenedb.com:24789/db/data/';
+var neo4JUrl   = 'http://pocii:r0TLomdDTV2lwBAOEbGz@pocii.sb05.stations.graphenedb.com:24789/db/data/';
+//var neo4JUrl = 'http://interactions:C0z0OZ70Oh7MriQHeNB5@interactions.sb02.stations.graphenedb.com:24789/db/data/';
 var passport = require('passport');
 var jwt = require('jsonwebtoken');
 
@@ -22,7 +23,7 @@ exports.signin = function(req, res, next) {
 					res.status(400).send(err);
 				} else {
                   // We are sending the profile inside the token
-                  var token = jwt.sign(user, 'secret-anne', { expiresInMinutes: 20 });
+                  var token = jwt.sign(user, 'secret-anne', { expiresInMinutes: 90 });
 
                   res.json({ token: token });
 				}
@@ -30,7 +31,24 @@ exports.signin = function(req, res, next) {
 		}
 	})(req, res, next);
 };
+exports.createNode = function (req, res) {
+    var node = req.body.node;
+    neo4j.connect(neo4JUrl, function (err, graph) {
+	if (err)
+            throw err;
+        graph.createNode(node, function (err, n) {
+  		console.log(err ? err : n);
+            res.json({
+                responseData: n,
+                error:err
+            });
+        });
+    });
 
+
+};
+
+/*
 exports.createNode = function (req, res) {
     //JSON. stringify is only available in mordern browers.....
 
@@ -54,6 +72,7 @@ exports.createNode = function (req, res) {
 
 
 };
+*/
 
 exports.getNode = function(req, res) {
     var retValue = '';
@@ -302,7 +321,7 @@ exports.getAllNodes = function(req, res) {
        
             query = [
                      'MATCH (n)  ',
-                     'WHERE n.tag=\'drugs\'',
+                     //'WHERE n.tag=\'drugs\'',
                      'RETURN n'
                         ].join('\n');
         graph.query(query, null, function(err, results) {

@@ -9,7 +9,7 @@
                             <div class="col-md-4">
                                 <form class="form-horizontal" role="form">
                                     <div class="form-group">
-                                         <label  class="control-label">Sample Queries:</label>
+                                         <label  class="control-label">Exemplos de Consultas:</label>
                                          <select ng-model="vm.selectedQuery" class="form-control" ng-options="q.name for q in vm.sampleQueries"
                                             ng-change="vm.query = vm.selectedQuery.query" ></select>
                                      </div>
@@ -21,17 +21,17 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <h2>Query Features</h2>
+                                <h2>Consultas</h2>
                                 <p>
-                                    <label>Cypher Query</label>
+                                    <label>Consultas em Cypher</label>
                                     <textarea data-ng-model="vm.query" rows="8" style="width:100%;"></textarea>
                                 </p>
                                 <p>
-                                    <button class="btn btn-success" data-ng-click="vm.runQuery()">Run Query</button>
+                                    <button class="btn btn-success" data-ng-click="vm.runQuery()">Execute</button>
                                 </p>
                             </div>
                             <div class="col-md-8">
-                                <h2>Query results</h2>
+                                <h2>Resultado da consulta</h2>
                                 <ul>
                                     <li data-ng-repeat="node in vm.nodes | filter:json">{{node}}</li>
                                 </ul>
@@ -42,6 +42,19 @@
                 <div class="widget-foot">
                     <div class="clearfix"></div>
                 </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             </div>
         </div>
 

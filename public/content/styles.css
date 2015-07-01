@@ -1,4 +1,4 @@
-﻿/*#region Override background color theme */
+/*#region Override background color theme */
 
 /*For Bootstrap 3*/
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -208,7 +208,7 @@ small {
 }
 
 .navbar .brand-title {
-    margin-left: 2em;
+    margin-left: 3.5em;
     color: #FFFFFF;
 }
 
@@ -583,4 +583,4 @@ a {
 .link {
   stroke: #999;
   stroke-opacity: 0.6;
-}
+}   

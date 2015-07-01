@@ -26,7 +26,7 @@
                     title: 'dashboard',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-dashboard"></i> Dashboard'
+                        content: '<i class="fa fa-dashboard"></i> Painel de Controle'
                     }
                 }
             },  
@@ -37,7 +37,7 @@
                     templateUrl: 'app/admin/create.html',
                     settings: {
                         nav: 2,
-                        content: '<i class="fa fa-tasks"></i> Manage Drugs'
+                        content: '<i class="fa fa-sitemap"></i> Gerencie Circuitos'
                     }
                 }
             },
@@ -48,10 +48,22 @@
                     templateUrl: 'app/admin/query.html',
                     settings: {
                         nav: 5,
-                        content: '<i class="fa fa-crosshairs"></i> Run Ad-hoc queries'
+                        content: '<i class="fa fa-search"></i> Consultas'
                     }
                 }
             },
+            {
+                url: '/visualization/visualization',
+                config: {
+                    title: 'Visualization',
+                    templateUrl: 'app/visualization/visualization.html',
+                    settings: {
+                        nav: 6,
+                        content: '<i class="fa fa-crosshairs"></i> Visualizações'
+                    }
+                }
+            },
+
             {
                 url: '/login/unauth',
                 config: {

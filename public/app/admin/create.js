@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     // Organize the controller name and dependencies here for easy recognition
@@ -18,16 +18,18 @@
         vm.title = 'Create Nodes Setup';
         vm.drugs = [];
         vm.relationships = [];
-        vm.relationshipTypes = ['INTERACTS_WITH', 'ALTERNATIVE_TO'];
+        vm.relationshipTypes = ['Esta_Em', 'Par_Metálico', 'Cabo de Pares', 'EMBRATEL', 'TELESAT', 'Cabo UTP'];
+        vm.nodeTypes = ['Local', 'DG', 'Vertical', 'Bloco', 'Par', 'Dispositivo'];
+
 
         // Our event handlers
         vm.addDrug = addDrug;
-        vm.listAllDrugs =listAllDrugs;
+        vm.listAllDrugs = listAllDrugs;
         vm.deleteDrug = deleteDrug;
         vm.addRelationship = addRelationship;
         vm.deleteRelationship = deleteRelationship;
-       
-        
+        vm.updateDrug = updateDrug;
+
 
         // Call this function when our controller is loaded
         activate();
@@ -41,7 +43,9 @@
         function activate() {
             var promises = [getAllNodes(), getAllRelationships()];
             common.activateController(promises, controllerId)
-                .then(function () { log('Activated Create View'); });
+                .then(function () {
+                    log('Activated Create View');
+                });
         }
 
         // Get all drug nodes
@@ -50,32 +54,51 @@
                 return vm.drugs = result.data.responseData;
             });
         }
-               
-      //    Get all relationships
-      function getAllRelationships() {
+
+        //    Get all relationships
+        function getAllRelationships() {
             return datacontext.getAllRelationships().then(function (result) {
-                return vm.relationships =  result.data.responseData;
+                return vm.relationships = result.data.responseData;
             });
         }
-  
+
         // Add a drug node
         function addDrug() {
-            if (vm.newDrugName==undefined)
-                  return;
+            if (vm.newDrugName == undefined){
+            logError('Preencha o campo Nome para adicionar um ponto');
+            return;
+        }
 
-            var newDrug = { tag:'drugs', name: vm.newDrugName, description: vm.newDrugDescription };
+            var newDrug = {type:vm.relation, name: vm.newDrugName, description: vm.newDrugDescription, citcuit:vm.ckt };
 
             datacontext.addNode(newDrug).then(
                 function(result) {
                     if (result.data.error==null){
                         vm.drugs.push({n:result.data.responseData});
                         log('Added: ' + vm.newDrugName);
-                        vm.newDrugName = null; vm.newDrugDescription = null;
+                        vm.newDrugName = null; vm.newDrugDescription = '';vm.ckt = ''
                     }
+                    else
+                        log(result.data.error);
+
                 });
            
            
         }
+
+        function updateDrug(){
+            if (vm.selectedDrug ==undefined){
+                logError('Escolha um ponto para atualizar');
+                return;
+            }
+            datacontext.updateNode(vm.selectedDrug.n.id,vm.selectedDrug.n.data).then(
+                function() {
+                    log('Modificado :' + vm.selectedDrug.n.data.name);
+                });
+
+            }
+
+
 
         function listAllDrugs(){
             return vm.drugs.toString();
@@ -101,7 +124,7 @@
         //Given 2 nodes and a relationship, create that relationship
         function addRelationship(){
 
-            if(vm.relationshipFrom ==undefined  || vm.relationshipTo == undefined || vm.relation == undefined){
+            if(vm.relationshipFrom ==undefined  || vm.relationshipTo == undefined || vm.relation == undefined ){
                 logError('All fields should be selected to create a relationship');    
                 return; 
             }
@@ -109,7 +132,7 @@
                 .then(function(result){
                     getAllRelationships();
                     log('Relationship created');
-                    vm.relationshipFrom = null; vm.relationshipTo = null; vm.relation = null;
+                    vm.relationshipFrom = null; vm.relationshipTo = null; vm.relation = null
                 });
                 
         }
